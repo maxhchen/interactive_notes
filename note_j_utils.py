@@ -1,13 +1,15 @@
 import streamlit as st
 import streamlit.components.v1 as components
-import pandas as pd
 import numpy as np
-import altair as alt
 from math import log10
 import numpy as np
-import matplotlib
 import matplotlib.pyplot as plt
-from matplotlib.widgets import Slider, Button, RadioButtons
+
+# Purpose: The purpose of this utils file is to not clutter the main note.py file and have all the plotting 
+# things here all in 1 place
+
+## CHANGELOG ##
+# 2021/05: Finished utils.py for Note J (Gavin)
 
 
 def plot_complex_vector(): 
