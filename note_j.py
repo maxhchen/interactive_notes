@@ -16,10 +16,10 @@ from note_j_utils import *
 st.title("Note J Supplement: Visualizing Complex Numbers")
 
 # Cartersian Form Visualization
-st.header("1.3 Complex Plane Visualization ")
+st.header("1. Complex Number Visualization (Cartesian Form)")
 st.write("""
- As shown in graphic below, a complex number $z = a + bj$ has an intercept at $a$ along the 
-real axis and $b$ along the imaginary axis. 
+ As shown in graphic below, a complex number $z = a + bj$ has a value of $a$ along the 
+real axis and a value of $b$ along the imaginary axis. 
 """)
 
 st.write("""
@@ -42,7 +42,7 @@ st.write(""" in polar form using the magnitude and the angle of $z$ to represent
 """)
 st.write("""
 You can adjust the same sidebar on the left to see how changing the real and imaginary axis of the complex number
-$z$ affects the phase and magnitude 
+$z$ affects the phase and magnitude of its polar representation
 """)
 polar_vector_fig = plot_polar_vector(real_slider, imag_slider)
 st.pyplot(polar_vector_fig)

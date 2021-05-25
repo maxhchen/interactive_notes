@@ -110,7 +110,9 @@ def plot_polar_vector(real_slider, imag_slider):
     y = z.imag-abs(w)/20*np.sin(fi_a)
     plt.annotate("Magnitude = " + str(magnitude), (7,16))
     plt.annotate("Phase = " + str(np.around(fi_a, decimals=2)) + " radians", (7,14))
-    plt.annotate("Degrees = " + str(np.around(np.degrees(fi_a), decimals=2)), (7,12))
+
+    # Uncomment if you want it in degrees
+    # plt.annotate("Degrees = " + str(np.around(np.degrees(fi_a), decimals=2)), (7,12))
 
     plt.arrow(0, 0, x, y, head_width=w/30, head_length=w/30, fc='b', ec='b', label='My label')
     return fig
