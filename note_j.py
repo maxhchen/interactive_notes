@@ -14,83 +14,41 @@ from note_j_utils import *
 # 2021/05: Streamlit
 
 st.title("Note J Supplement: Visualizing Complex Numbers")
+
+# Cartersian Form Visualization
 st.header("1.3 Complex Plane Visualization ")
 st.write("""
  As shown in graphic below, a complex number $z = a + bj$ has an intercept at $a$ along the 
-real axis and $b$ along the imaginary axis 
+real axis and $b$ along the imaginary axis. 
 """)
 
 st.write("""
- Play around with the graphic to get a better feel of complex numbers!
+Play around with the graphic below to get a better feel of complex numbers in Cartesian Form!
 You can adjust the complex number plotted here with the real and
-imaginary axis on the sidebar on the left
+imaginary axis on the sidebar. 
 """)
 
+complex_vector_fig, real_slider, imag_slider = plot_complex_vector()
+st.pyplot(complex_vector_fig)
 
-# Define initial parameters
-init_real = 5
-init_im = 5
+# Polar form Visualization
+st.header("2. Polar Form Visualization ")
+st.write(""" A complex number $z = a + bj$ can also be written equivalently as:
+""")
+st.latex(r'''
+    z = |z|e^{j\angle{z}}
+''')
+st.write(""" in polar form using the magnitude and the angle of $z$ to represent the complex number.
+""")
+st.write("""
+You can adjust the same sidebar on the left to see how changing the real and imaginary axis of the complex number
+$z$ affects the phase and magnitude 
+""")
 
-# Create the figure and the line that we will manipulate
-z = 5+5j
-w=10
-fig, axis = plt.subplots()
-plt.axis("on")
-plt.grid()
-plt.text(-0.15*w, 0.8*w, "Im", fontsize=14)
-plt.text(0.8*w,-0.15*w, "Re", fontsize=14)
+polar_vector_fig = plot_polar_vector(real_slider, imag_slider)
+st.pyplot(polar_vector_fig)
 
 
-# The real and imaginary axis
-plt.xlim(-w,w)
-plt.ylim(-w,w)
-plt.arrow(0, -w, 0, 1.9*w, head_width=w/20, head_length=w/20, fc='k', ec='k')
-plt.arrow(-w, 0, 1.9*w, 0, head_width=w/20, head_length=w/20, fc='k', ec='k')
-
-# plot the vector
-fi_a= np.angle(z)
-x=z.real - abs(w)/20*np.cos(fi_a)
-y=z.imag - abs(w)/20*np.sin(fi_a)
-
-arrow = plt.arrow(0, 0, x, y, head_width=w/30, head_length=w/30, fc='b', ec='b')
-axcolor = 'lightgoldenrodyellow'
-
-# adjust the main plot to make room for the sliders
-plt.subplots_adjust(left=0.25, bottom=0.25)
-real_slider = st.sidebar.slider(  
-    label='Real Axis',
-    min_value=-10,
-    max_value=10,
-    value = 5
-)
-
-imaginary_slider = st.sidebar.slider(
-    label="Imaginary axis",
-    min_value=-10,
-    max_value=10,
-    value = 5
-)
-
-axis.clear()
-plt.axis("on")
-plt.grid()
-plt.text(-0.15*w, 0.8*w, "Im", fontsize=14)
-plt.text(0.8*w,-0.15*w, "Re", fontsize=14)
-
-# The real and imaginary axis
-plt.xlim(-w,w)
-plt.ylim(-w,w)
-plt.arrow(0, -w, 0, 1.9*w, head_width=w/20, head_length=w/20, fc='k', ec='k')
-plt.arrow(-w, 0, 1.9*w, 0, head_width=w/20, head_length=w/20, fc='k', ec='k')
-
-# plot the vector
-z = real_slider + imaginary_slider * 1j 
-print(z)
-fi_a = np.angle(z)
-x = z.real -abs(w)/20*np.cos(fi_a)
-y = z.imag-abs(w)/20*np.sin(fi_a)
-plt.arrow(0, 0, x, y, head_width=w/30, head_length=w/30, fc='b', ec='b')
-st.pyplot(plt)
 
 
 # real_min, real_max = 0, 10
