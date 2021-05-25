@@ -44,17 +44,13 @@ st.write("""
 You can adjust the same sidebar on the left to see how changing the real and imaginary axis of the complex number
 $z$ affects the phase and magnitude 
 """)
-
 polar_vector_fig = plot_polar_vector(real_slider, imag_slider)
 st.pyplot(polar_vector_fig)
 
+for i in range(5):
+    st.text("")
 
 
-
-# real_min, real_max = 0, 10
-# imaginary_min, imaginary_max = 0, 10
-# real = st.sidebar.slider('Real Axis', real_min, real_max)
-# imaginary = st.sidebar.slider('Imaginary Axis', imaginary_min, imaginary_max)
-
-
-
+st.write("""
+Created by Maxwell Chen and Gavin Liu
+""")
