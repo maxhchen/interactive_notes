@@ -107,6 +107,7 @@ st.header("3. Band Pass Filters")
 st.write("""
     Similar to the low-pass and high-pass filters above, play around with the graphic below to get a better feel of how the input signal is 
     affected by the bandpass filter now. Recall that a bandpass filter is just a low-pass filter cascaded with a high-pass filter.
+    You can adjust the bandpass filters by changing the RC values of the low and high pass filters using the same way as above.
 """)
 fig3, axis3 = plt.subplots()
 t = np.linspace(0, 1, 1000)
