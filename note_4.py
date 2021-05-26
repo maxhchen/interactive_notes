@@ -6,9 +6,10 @@ from matplotlib.widgets import Slider, Button, RadioButtons
 from note_4_utils import * 
 
 ## CHANGELOG ##
-# 2021/05: Streamlit
-st.set_option('deprecation.showPyplotGlobalUse', False)
+# 2021/05: Finished Note 4 supplement (Gavin)
 
+
+st.set_option('deprecation.showPyplotGlobalUse', False)
 amp_slider = st.sidebar.slider(  
     label='Signal Amplitude',
     min_value=0.0,

@@ -11,7 +11,7 @@ from matplotlib.widgets import Slider, Button, RadioButtons
 from note_j_utils import * 
 
 ## CHANGELOG ##
-# 2021/05: Streamlit
+# 2021/05: Finished utils.py for Note J (Gavin)
 
 
 
