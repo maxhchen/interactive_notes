@@ -23,7 +23,7 @@ You can adjust the complex number plotted here with the real and
 imaginary axis on the sidebar. 
 """)
 
-complex_vector_fig, real_slider, imag_slider = plot_complex_vector()
+complex_vector_fig = plot_complex_vector()
 st.pyplot(complex_vector_fig)
 
 # Polar form Visualization
@@ -39,7 +39,7 @@ st.write("""
 You can adjust the same sidebar on the left to see how changing the real and imaginary axis of the complex number
 $z$ affects the phase and magnitude of its polar representation
 """)
-polar_vector_fig = plot_polar_vector(real_slider, imag_slider)
+polar_vector_fig = plot_polar_vector()
 st.pyplot(polar_vector_fig)
 
 for i in range(5):

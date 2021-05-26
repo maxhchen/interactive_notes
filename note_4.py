@@ -17,12 +17,12 @@ st.title("Note 4 Supplement: Visualizing Complex Numbers")
 # Cartersian Form Visualization
 st.header("1. Complex Number Visualization (Cartesian Form)")
 st.write("""
- As shown in graphic below, a complex number $z = a + bj$ has a value of $a$ along the 
+ As shown in the graphic below, a complex number $z = a + bj$ has a value of $a$ along the 
 real axis and a value of $b$ along the imaginary axis. 
 """)
 
 st.write("""
-Play around with the graphic below to get a better feel of complex numbers in Cartesian Form!
+Play around with the graphic below to get a better feel for complex numbers in Cartesian Form!
 You can adjust the complex number plotted here with the real and
 imaginary axis on the sidebar. 
 """)
@@ -43,7 +43,7 @@ st.write("""
 You can adjust the same sidebar on the left to see how changing the real and imaginary axis of the complex number
 $z$ affects the phase and magnitude of its polar representation
 """)
-polar_vector_fig = plot_polar_vector(real_slider, imag_slider)
+polar_vector_fig = plot_polar_vector()
 st.pyplot(polar_vector_fig)
 
 for i in range(5):
