@@ -103,6 +103,7 @@ axis2.set_ylabel("Voltage (V) ")
 hp_filter_fig = plot_hp_filter(t, axis2, amp_slider, phase_slider, w_slider, r_hp_slider, c_hp_slider)
 st.pyplot(hp_filter_fig)
 
+# BP Filter Visualization
 st.header("3. Band Pass Filters")
 st.write("""
     Similar to the low-pass and high-pass filters above, play around with the graphic below to get a better feel of how the input signal is 
@@ -121,8 +122,7 @@ st.pyplot(bp_filter_fig)
 for i in range(5):
     st.text("")
 
-
 st.write("""
-Created by Maxwell Chen and Gavin Liu
+    Created by Maxwell Chen and Gavin Liu
 """)
 
