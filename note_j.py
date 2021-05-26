@@ -36,7 +36,7 @@ st.latex(r'''
 st.write(""" in polar form using the magnitude and the angle of $z$ to represent the complex number.
 """)
 st.write("""
-You can adjust the same sidebar on the left to see how changing the real and imaginary axis of the complex number
+You can adjust the magnitude and angle sidebar on the left to see how changing the real and imaginary axis of the complex number
 $z$ affects the phase and magnitude of its polar representation
 """)
 polar_vector_fig = plot_polar_vector()
