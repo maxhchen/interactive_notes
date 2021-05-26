@@ -65,10 +65,6 @@ def plot_polar_vector():
     z = 5+5j
     w = 20 # Maximum value
     fig, axis = plt.subplots()
-    plt.axis("on")
-    plt.grid()
-    plt.text(-0.15*w, 0.8*w, "Im", fontsize=14)
-    plt.text(0.8*w,-0.15*w, "Re", fontsize=14)
 
 
     # The real and imaginary axis
@@ -94,15 +90,11 @@ def plot_polar_vector():
     # plot the vector
     z = mag_slider * np.cos(angle_slider) + (mag_slider * np.sin(angle_slider)) * 1j 
     fi_a= np.angle(z)
-    x = z.real - abs(w)/20*np.cos(fi_a)
-    y = z.imag - abs(w)/20*np.sin(fi_a)
-    #plt.annotate("Magnitude = " + str(magnitude), (7,16))
-    #plt.annotate("Phase = " + str(np.around(fi_a, decimals=2)) + " radians", (7,14))
-
-    # Uncomment if you want it in degrees
-    # plt.annotate("Degrees = " + str(np.around(np.degrees(fi_a), decimals=2)), (7,12))
-
-    plt.arrow(0, 0, x, y, head_width=w/30, head_length=w/30, fc='b', ec='b', label='My label')
+    x_val = z.real - abs(w)/20*np.cos(fi_a)
+    y_val = z.imag - abs(w)/20*np.sin(fi_a)
+    txt = "z = {x}+ {y}i".format(x = np.around(x_val, decimals=2), y = np.around(y_val, decimals=2))
+    plt.annotate(txt, (5,16), size=12)
+    plt.arrow(0, 0, x_val, y_val, head_width=w/30, head_length=w/30, fc='b', ec='b', label='My label')
     return fig
 
 
